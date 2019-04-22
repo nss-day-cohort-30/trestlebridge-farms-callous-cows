@@ -3,6 +3,7 @@ using System.Linq;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models;
 using Trestlebridge.Models.Animals;
+using Trestlebridge.Models.Plants;
 
 namespace Trestlebridge.Actions {
     public class ChooseGrazingField {
@@ -11,7 +12,7 @@ namespace Trestlebridge.Actions {
 
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
-                Console.WriteLine ($"{i + 1}. Grazing Field");
+                Console.WriteLine ($"{i+1}. Grazing Field");
             }
 
             Console.WriteLine ();
@@ -30,6 +31,11 @@ namespace Trestlebridge.Actions {
              */
             // farm.PurchaseResource<IGrazing>(animal, choice);
 
+        }
+
+        internal static void CollectInput(Farm seed, Sunflower sunflower)
+        {
+            throw new NotImplementedException();
         }
     }
 }
