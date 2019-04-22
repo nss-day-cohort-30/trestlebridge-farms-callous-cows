@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
-
+using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Models.Facilities {
     public class DuckHouse : IFacility<Duck>
