@@ -23,6 +23,15 @@ namespace Trestlebridge.Actions {
                     case 2:
                     farm.AddPlowedField(new PlowedField());
                     break;
+                     case 3:
+                    farm.AddNaturalField(new NaturalField());
+                    break;
+                     case 4:
+                    farm.AddChickenHouse(new ChickenHouse());
+                    break;
+                     case 5:
+                    farm.AddDuckHouse(new DuckHouse());
+                    break;
 
                 default:
                     break;

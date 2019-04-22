@@ -51,7 +51,7 @@ namespace Trestlebridge.Models
         {
             ChickenHouses.Add(house);
         }
-        public void AddDuckHouses(DuckHouse house)
+        public void AddDuckHouse(DuckHouse house)
         {
             DuckHouses.Add(house);
         }
