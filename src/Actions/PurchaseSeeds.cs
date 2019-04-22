@@ -20,13 +20,13 @@ namespace Trestlebridge.Actions {
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    ChooseGrazingField.CollectInput(seed, new Sesame());
+                    // ChooseGrazingField.CollectInput(seed, new Sesame());
                     break;
                 case 2:
-                    ChooseGrazingField.CollectInput(seed, new Sunflower());
+                    // ChooseGrazingField.CollectInput(seed, new Sunflower());
                     break;
                 case 3:
-                    CreateFacility.CollectInput(seed, new Wildflower());
+                    // CreateFacility.CollectInput(seed, new Wildflower());
                     break;
 
             }
