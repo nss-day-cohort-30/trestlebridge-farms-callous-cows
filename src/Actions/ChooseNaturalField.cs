@@ -37,10 +37,5 @@ namespace Trestlebridge.Actions
       // farm.PurchaseResource<IGrazing>(animal, choice);
 
     }
-
-    internal static void CollectInput(Farm seed, Sesame sesame)
-    {
-      throw new NotImplementedException();
-    }
   }
 }
