@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models.Plants;
 
-namespace Trestlebridge.Models.Facilities {
+namespace Trestlebridge.Models.Facilities
+{
     public class NaturalField : IFacility<Seed>
     {
         private int _capacity = 50;
@@ -12,28 +13,32 @@ namespace Trestlebridge.Models.Facilities {
 
         private List<Seed> _seeds = new List<Seed>();
 
-    public double Capacity {
-            get {
+        public double Capacity
+        {
+            get
+            {
                 return _capacity;
             }
         }
 
-        public void AddResource (Seed seed)
+        public void AddResource(Seed seed)
         {
-            if (_seeds.Count < _capacity) {
+            if (_seeds.Count < _capacity)
+            {
                 _seeds.Add(seed);
             }
         }
 
-        public void AddResource (List<Seed> seed)  // TODO: Take out this method for boilerplate
+        public void AddResource(List<Seed> seed)  // TODO: Take out this method for boilerplate
         {
-            if (seed.Count + seed.Count <= _capacity) {
+            if (seed.Count + seed.Count <= _capacity)
+            {
                 seed.AddRange(seed);
             }
         }
 
 
-    public override string ToString()
+        public override string ToString()
         {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
