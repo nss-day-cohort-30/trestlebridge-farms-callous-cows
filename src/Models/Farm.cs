@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models.Facilities;
+using Trestlebridge.Models.Plants;
 
 namespace Trestlebridge.Models
 {
     public class Farm
     {
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
-        // public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
-        // public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
-        // public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
-        // public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+        public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
+        public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
+        public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+        public List<Sesame> Sesame {get; set;} = new List<Sesame>();
+        public List<Sunflower> Sunflower {get; set;} = new List<Sunflower>();
+        public List<Wildflower> Wildflower {get; set;} = new List<Wildflower>();
 
 
 
@@ -20,7 +24,7 @@ namespace Trestlebridge.Models
             This method must specify the correct product interface of the
             resource being purchased.
          */
-        public void PurchaseResource<T> (IResource resource, int index)
+        public void PurchaseResource<T>(IResource resource, int index)
         {
             Console.WriteLine(typeof(T).ToString());
             switch (typeof(T).ToString())
@@ -33,9 +37,27 @@ namespace Trestlebridge.Models
             }
         }
 
-        public void AddGrazingField (GrazingField field)
+
+        public void AddGrazingField(GrazingField field)
         {
             GrazingFields.Add(field);
+        }
+        public void AddNaturalField(NaturalField field)
+        {
+            NaturalFields.Add(field);
+        }
+
+        public void AddPlowedField(PlowedField field)
+        {
+            PlowedFields.Add(field);
+        }
+        public void AddChickenHouse(ChickenHouse house)
+        {
+            ChickenHouses.Add(house);
+        }
+        public void AddDuckHouses(DuckHouse house)
+        {
+            DuckHouses.Add(house);
         }
 
         public override string ToString()
