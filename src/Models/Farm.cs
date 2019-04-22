@@ -14,9 +14,6 @@ namespace Trestlebridge.Models
         public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
         public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
-        public List<Sesame> Sesame {get; set;} = new List<Sesame>();
-        public List<Sunflower> Sunflower {get; set;} = new List<Sunflower>();
-        public List<Wildflower> Wildflower {get; set;} = new List<Wildflower>();
 
 
 

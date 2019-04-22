@@ -32,7 +32,12 @@ namespace Trestlebridge.Models.Facilities {
             }
         }
 
-        public override string ToString()
+    internal void AddResource(ISeedProducing seed)
+    {
+      throw new NotImplementedException();
+    }
+
+    public override string ToString()
         {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
