@@ -12,10 +12,10 @@ namespace Trestlebridge.Actions {
 
             for (int i = 0; i < farm.GrazingFields.Count; i++)
             {
-                Console.WriteLine ($"{i+1}. Grazing Field");
+                Console.WriteLine ($"{i}. Grazing Field  ");
             }
 
-            Console.WriteLine ();
+            // Console.WriteLine ();
 
             // How can I output the type of animal chosen here?
             Console.WriteLine ($"Place the animal where?");
