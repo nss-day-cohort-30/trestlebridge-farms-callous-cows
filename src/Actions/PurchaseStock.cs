@@ -43,22 +43,45 @@ namespace Trestlebridge.Actions
                     }
                     break;
                 case 2:
-                    ChooseGrazingField.CollectInput(farm, new Cow());
+                    for (int i = 0; i < amount; i++)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Cow());
+                    }
+
                     break;
                 case 3:
-                    ChooseDuckHouse.CollectInput(farm, new Duck());
+                    for (int i = 0; i < amount; i++)
+                    {
+                        ChooseDuckHouse.CollectInput(farm, new Duck());
+                    }
                     break;
                 case 4:
-                    ChooseGrazingField.CollectInput(farm, new Goat());
+                    for (int i = 0; i < amount; i++)
+                    {
+
+                        ChooseGrazingField.CollectInput(farm, new Goat());
+                    }
                     break;
                 case 5:
-                    ChooseGrazingField.CollectInput(farm, new Ostrich());
+                    for (int i = 0; i < amount; i++)
+                    {
+
+                        ChooseGrazingField.CollectInput(farm, new Ostrich());
+                    }
                     break;
                 case 6:
-                    ChooseGrazingField.CollectInput(farm, new Pig());
+                    for (int i = 0; i < amount; i++)
+                    {
+
+                        ChooseGrazingField.CollectInput(farm, new Pig());
+                    }
                     break;
                 case 7:
-                    ChooseGrazingField.CollectInput(farm, new Sheep());
+                    for (int i = 0; i < amount; i++)
+                    {
+
+                        ChooseGrazingField.CollectInput(farm, new Sheep());
+                    }
                     break;
                 default:
                     break;
