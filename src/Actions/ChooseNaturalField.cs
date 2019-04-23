@@ -10,6 +10,7 @@ namespace Trestlebridge.Actions
     {
         public static void CollectInput(Farm farm, INatural seed)
         {
+            Console.WriteLine("we got here");
             Console.Clear();
             try
             {
@@ -17,10 +18,7 @@ namespace Trestlebridge.Actions
                 {
                     Console.WriteLine($"{i + 1}. Natural Field has {farm.NaturalFields[i].SeedsCount.Count()} seeds");
                 }
-                if (seed.GetType().Name != "sesame")
-                {
-                    Console.WriteLine(seed.GetType().Name);
-                }
+
                 Console.WriteLine();
 
                 Console.WriteLine($"Place the seeds where?");
