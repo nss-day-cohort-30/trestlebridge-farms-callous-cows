@@ -16,7 +16,7 @@ namespace Trestlebridge.Actions
             {
                 for (int i = 0; i < farm.PlowedFields.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. Plowed Fields");
+                    Console.WriteLine($"{i + 1}. Plowed Fields has {farm.PlowedFields[i].SeedsCount.Count()} seeds");
                 }
 
                 Console.WriteLine();

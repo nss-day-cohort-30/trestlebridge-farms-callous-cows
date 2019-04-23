@@ -18,6 +18,8 @@ namespace Trestlebridge.Models.Facilities {
             }
         }
 
+        public List<IPlowable> SeedsCount { get => _seeds; set => _seeds = value; }
+
         public void AddResource (IPlowable seed)
         {
             if (_seeds.Count < _capacity) {
