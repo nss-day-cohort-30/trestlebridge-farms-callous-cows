@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models.Plants;
+using System.Linq;
 
 namespace Trestlebridge.Models.Facilities
 {
@@ -29,8 +30,9 @@ namespace Trestlebridge.Models.Facilities
             {
                 _seeds.Add(seed);
             }
-             else{
-                 Console.WriteLine("Natural field is at capacity");
+            else
+            {
+                Console.WriteLine("Natural field is at capacity");
             }
         }
 
@@ -40,8 +42,9 @@ namespace Trestlebridge.Models.Facilities
             {
                 seed.AddRange(seed);
             }
-             else{
-                 Console.WriteLine("Natural field is at capacity");
+            else
+            {
+                Console.WriteLine("Natural field is at capacity");
             }
         }
 
@@ -49,10 +52,9 @@ namespace Trestlebridge.Models.Facilities
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
-            string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Natural field {shortId} has {this._seeds.Count} seed\n");
-            this._seeds.ForEach(a => output.Append($" Seeds {a}\n"));
+            // output.Append($"Natural field {shortId} has {this._seeds.Count} seed\n");
+            // this._seeds.ForEach(a => output.Append($" Seeds {a}\n"));
 
             return output.ToString();
         }
