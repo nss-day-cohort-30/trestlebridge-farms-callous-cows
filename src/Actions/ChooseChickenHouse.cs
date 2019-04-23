@@ -15,18 +15,7 @@ namespace Trestlebridge.Actions
         {
             Console.Clear();
 
-            Console.WriteLine("How many?");
-            Console.Write("> ");
-            int option = Convert.ToInt32(Console.ReadLine());
 
-            List<Chicken> chickens = new List<Chicken>();
-            if (option > 1)
-            {
-                for (int i = 0; i < option; i++)
-                {
-                    chickens.Add(new Chicken());
-                }
-            }
 
             try
             {
@@ -46,14 +35,10 @@ namespace Trestlebridge.Actions
 
 
 
-                if (chickens.Count == 0)
-                {
+
                     farm.ChickenHouses[choice - 1].AddResource(chicken);
-                }
-                else
-                {
-                    farm.ChickenHouses[choice - 1].AddResource(chickens);
-                }
+
+
 
             }
             catch (ArgumentOutOfRangeException)
