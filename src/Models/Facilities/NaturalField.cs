@@ -30,8 +30,9 @@ namespace Trestlebridge.Models.Facilities
             {
                 _seeds.Add(seed);
             }
-             else{
-                 Console.WriteLine("Natural field is at capacity");
+            else
+            {
+                Console.WriteLine("Natural field is at capacity");
             }
         }
 
@@ -41,8 +42,9 @@ namespace Trestlebridge.Models.Facilities
             {
                 seed.AddRange(seed);
             }
-             else{
-                 Console.WriteLine("Natural field is at capacity");
+            else
+            {
+                Console.WriteLine("Natural field is at capacity");
             }
         }
 

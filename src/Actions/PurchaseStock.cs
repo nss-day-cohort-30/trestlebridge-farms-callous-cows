@@ -29,11 +29,6 @@ namespace Trestlebridge.Actions
             Console.Write("> ");
             int amount = Convert.ToInt32(Console.ReadLine());
 
-
-
-
-
-
             switch (Int32.Parse(choice))
             {
                 case 1:
@@ -47,7 +42,6 @@ namespace Trestlebridge.Actions
                     {
                         ChooseGrazingField.CollectInput(farm, new Cow());
                     }
-
                     break;
                 case 3:
                     for (int i = 0; i < amount; i++)

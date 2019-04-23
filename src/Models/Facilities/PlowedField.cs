@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
 using Trestlebridge.Models.Plants;
+using System.Linq;
 
 namespace Trestlebridge.Models.Facilities {
     public class PlowedField : IFacility<IPlowable>
@@ -45,8 +46,20 @@ namespace Trestlebridge.Models.Facilities {
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Plowed field {shortId} has {this._seeds.Count} seeds\n");
-            this._seeds.ForEach(a => output.Append($"   {a}\n"));
+            var groupedSeeds = _seeds.GroupBy(
+              currentSeed => currentSeed.Type
+                );
+            Console.WriteLine(groupedSeeds.Count());
+            var seedString = "";
+            foreach (var currentSeedGroup in groupedSeeds)
+            {
+                seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
+                Console.WriteLine(currentSeedGroup.Count());
+            };
+            Console.WriteLine($"Grazing Field ({seedString})");
+
+            // output.Append($"Plowed field {shortId} has {this._seeds.Count} seeds\n");
+            // this._seeds.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
         }
