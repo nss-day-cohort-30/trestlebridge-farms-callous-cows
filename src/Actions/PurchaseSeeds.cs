@@ -32,7 +32,6 @@ namespace Trestlebridge.Actions
                 case 3:
                    ChooseNaturalField.CollectInput(seed, new Wildflower());
                     break;
-
             }
         }
     }

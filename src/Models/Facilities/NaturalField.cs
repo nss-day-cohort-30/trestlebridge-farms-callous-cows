@@ -6,12 +6,12 @@ using Trestlebridge.Models.Plants;
 
 namespace Trestlebridge.Models.Facilities
 {
-    public class NaturalField : IFacility<Seed>
+    public class NaturalField : IFacility<INatural>
     {
         private int _capacity = 50;
         private Guid _id = Guid.NewGuid();
 
-        private List<Seed> _seeds = new List<Seed>();
+        private List<INatural> _seeds = new List<INatural>();
 
         public double Capacity
         {
@@ -21,7 +21,7 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-        public void AddResource(Seed seed)
+        public void AddResource(INatural seed)
         {
             if (_seeds.Count < _capacity)
             {
@@ -29,7 +29,7 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-        public void AddResource(List<Seed> seed)  // TODO: Take out this method for boilerplate
+        public void AddResource(List<INatural> seed)  // TODO: Take out this method for boilerplate
         {
             if (seed.Count + seed.Count <= _capacity)
             {
