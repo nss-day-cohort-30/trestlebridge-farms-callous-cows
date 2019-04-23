@@ -15,7 +15,7 @@ namespace Trestlebridge.Actions
             {
                 for (int i = 0; i < farm.NaturalFields.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. Natural Field has {farm.NaturalFields[i].SeedsCount.Count()} seeds");
+                    Console.WriteLine($"{i + 1}. Natural Field has {farm.NaturalFields[i].SeedsCount.Count()} rows of plants");
                 }
                 if (seed.GetType().Name != "sesame")
                 {
