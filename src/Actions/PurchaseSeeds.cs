@@ -24,10 +24,10 @@ namespace Trestlebridge.Actions {
                     ChooseNaturalField.CollectInput(seed, new Sesame());
                     break;
                 case 2:
-                    ChooseNaturalField.CollectInput(seed, new Sunflower());
+                    // ChooseNaturalField.CollectInput(seed, new Sunflower());
                     break;
                 case 3:
-                    ChooseNaturalField.CollectInput(seed, new Wildflower());
+                    // ChooseNaturalField.CollectInput(seed, new Wildflower());
                     break;
 
             }
