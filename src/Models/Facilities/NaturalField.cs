@@ -51,10 +51,20 @@ namespace Trestlebridge.Models.Facilities
 
         public override string ToString()
         {
-            StringBuilder output = new StringBuilder();
+             StringBuilder output = new StringBuilder();
+            string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            // output.Append($"Natural field {shortId} has {this._seeds.Count} seed\n");
-            // this._seeds.ForEach(a => output.Append($" Seeds {a}\n"));
+            var groupedSeeds = _seeds.GroupBy(
+            currentSeed => currentSeed.Type
+              );
+              Console.WriteLine(groupedSeeds.Count());
+          var seedString = "";
+          foreach (var currentSeedGroup in groupedSeeds)
+          {
+            seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
+            Console.WriteLine(currentSeedGroup.Count());
+          };
+          Console.WriteLine($"Grazing Field ({seedString})");
 
             return output.ToString();
         }
