@@ -8,7 +8,7 @@ namespace Trestlebridge.Actions
 {
   public class ChooseNaturalField
   {
-    public static void CollectInput(Farm farm, Seed seed)
+    public static void CollectInput(Farm farm, INatural seed)
     {
       Console.Clear();
 

@@ -7,7 +7,7 @@ using Trestlebridge.Models.Plants;
 
 namespace Trestlebridge.Actions {
     public class ChoosePlowedField {
-        public static void CollectInput (Farm farm, Seed seed) {
+        public static void CollectInput (Farm farm, IPlowable seed) {
             Console.Clear();
 
             for (int i = 0; i < farm.PlowedFields.Count; i++)
