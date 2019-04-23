@@ -6,8 +6,12 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Actions {
     public class ChooseChickenHouse {
+
+
         public static void CollectInput (Farm farm, Chicken chicken) {
             Console.Clear();
+             try
+        {
 
             for (int i = 0; i < farm.ChickenHouses.Count; i++)
             {
@@ -22,15 +26,19 @@ namespace Trestlebridge.Actions {
             Console.Write ("> ");
             int choice = Int32.Parse(Console.ReadLine ());
 
+            farm.ChickenHouses[choice - 1 ].AddResource(chicken);
+        }
+        catch (ArgumentOutOfRangeException)
+        {
 
+            Console.WriteLine("There is no facility to house this animal");
+        }
 
-            farm.ChickenHouses[choice].AddResource(chicken);
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
+            // /*
+            //     Couldn't get this to work. Can you?
+            //     Stretch goal. Only if the app is fully functional.
+            //  */
+            // // farm.PurchaseResource<IGrazing>(animal, choice);
 
         }
     }
