@@ -17,6 +17,8 @@ namespace Trestlebridge.Models
 
 
 
+
+
         /*
             This method must specify the correct product interface of the
             resource being purchased.
