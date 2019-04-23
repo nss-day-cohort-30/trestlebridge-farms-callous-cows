@@ -29,6 +29,9 @@ namespace Trestlebridge.Models.Facilities
             {
                 _seeds.Add(seed);
             }
+             else{
+                 Console.WriteLine("Natural field is at capacity");
+            }
         }
 
         public void AddResource(List<INatural> seed)  // TODO: Take out this method for boilerplate
@@ -36,6 +39,9 @@ namespace Trestlebridge.Models.Facilities
             if (seed.Count + seed.Count <= _capacity)
             {
                 seed.AddRange(seed);
+            }
+             else{
+                 Console.WriteLine("Natural field is at capacity");
             }
         }
 
