@@ -33,9 +33,5 @@ namespace Trestlebridge.Actions {
 
         }
 
-        internal static void CollectInput(Farm seed, Sunflower sunflower)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
