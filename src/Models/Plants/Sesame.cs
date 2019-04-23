@@ -3,18 +3,11 @@ using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Plants
 {
-    public class Sesame : IResource, ISeedProducing
+    public class Sesame : Seed, IResource, ISeedProducing
     {
-        private int _seedsProduced = 40;
-        public string Type { get; } = "Sesame";
-        public double SeedProduced { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-
+        public Sesame() {SeedProduced = 40;
+        Type = "Sesame";}
         //TODO   fix seed get
-
-        public double Harvest () {
-            return _seedsProduced;
-        }
 
         public override string ToString () {
             return $"Sesame. Yum!";
