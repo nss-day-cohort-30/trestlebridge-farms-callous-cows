@@ -22,19 +22,35 @@ namespace Trestlebridge.Actions
       Console.Write("> ");
       string choice = Console.ReadLine();
 
+       Console.WriteLine("How many?");
+            Console.Write("> ");
+            int amount = Convert.ToInt32(Console.ReadLine());
+
       switch (Int32.Parse(choice))
       {
         case 1:
+         for (int i = 0; i < amount; i++)
+                    {
           ChoosePlowedField.CollectInput(farm, new Sesame());
+                    }
           break;
         case 2:
+          for (int i = 0; i < amount; i++)
+                    {
           ChooseNaturalField.CollectInput(farm, new Sunflower());
+                    }
           break;
         case 3:
+          for (int i = 0; i < amount; i++)
+                    {
           ChoosePlowedField.CollectInput(farm, new Sunflower());
+                    }
           break;
         case 4:
+          for (int i = 0; i < amount; i++)
+                    {
           ChooseNaturalField.CollectInput(farm, new Wildflower());
+                    }
           break;
       }
     }
