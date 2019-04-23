@@ -16,10 +16,7 @@ namespace Trestlebridge.Actions
       {
         Console.WriteLine($"{i + 1}. Natural Field");
       }
-      if (seed.GetType().Name != "sesame")
-      {
-        Console.WriteLine(seed.GetType().Name);
-      }
+
       Console.WriteLine();
 
       Console.WriteLine($"Place the seeds where?");
