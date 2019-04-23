@@ -25,12 +25,18 @@ namespace Trestlebridge.Models.Facilities {
             if (_seeds.Count < _capacity) {
                 _seeds.Add(seed);
             }
+             else{
+                 Console.WriteLine("Plowed field is at capacity");
+            }
         }
 
         public void AddResource (List<IPlowable> seeds)  // TODO: Take out this method for boilerplate
         {
             if (_seeds.Count + seeds.Count <= _capacity) {
                 _seeds.AddRange(seeds);
+            }
+             else{
+                 Console.WriteLine("Plowed field is at capacity");
             }
         }
 
