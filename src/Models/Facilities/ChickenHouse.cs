@@ -24,12 +24,18 @@ namespace Trestlebridge.Models.Facilities {
             if (_chickens.Count < _capacity) {
                 _chickens.Add(chicken);
             }
+             else{
+                 Console.WriteLine("Chicken house is at capacity");
+            }
         }
 
         public void AddResource (List<Chicken> chickens)  // TODO: Take out this method for boilerplate
         {
             if (_chickens.Count + chickens.Count <= _capacity) {
                 _chickens.AddRange(chickens);
+            }
+             else{
+                 Console.WriteLine("Chicken house is at capacity");
             }
         }
 

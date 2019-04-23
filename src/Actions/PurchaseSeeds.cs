@@ -12,8 +12,9 @@ namespace Trestlebridge.Actions
     public static void CollectInput(Farm farm)
     {
       Console.WriteLine("1. Sesame");
-      Console.WriteLine("2. Sunflower");
-      Console.WriteLine("3. Wildflower");
+      Console.WriteLine("2. Sunflower to natural field");
+      Console.WriteLine("3. Sunflower to plowable field");
+      Console.WriteLine("4. Wildflower");
 
       Console.WriteLine();
       Console.WriteLine("What are you buying today?");
