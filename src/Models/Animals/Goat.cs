@@ -32,7 +32,7 @@ private double _compostProduced = 7.5;
         }
 
         public override string ToString () {
-            return $"Goat {this._shortId}.Bahhh!";
+            return $"";
         }
     }
 }

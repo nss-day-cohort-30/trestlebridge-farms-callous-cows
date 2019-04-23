@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
-
+using System.Linq;
 
 namespace Trestlebridge.Models.Facilities {
     public class GrazingField : IFacility<IGrazing>
@@ -38,22 +38,39 @@ namespace Trestlebridge.Models.Facilities {
              else{
                  Console.WriteLine("Grazing field is at capacity");
             }
+
         }
 
-    internal void AddResource(ISeedProducing seed)
-    {
-      throw new NotImplementedException();
-    }
+    // internal void AddResource(ISeedProducing seed)
+    // {
+    //   throw new NotImplementedException();
+    // }
+
 
     public override string ToString()
         {
+
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
-            this._animals.ForEach(a => output.Append($"   {a}\n"));
+          var groupedAnimals = _animals.GroupBy(
+            currentAnimal => currentAnimal.Type
+              );
+              Console.WriteLine(groupedAnimals.Count());
+          var animalsString = "";
+          foreach (var currentAnimalGroup in groupedAnimals)
+          {
+            animalsString += currentAnimalGroup.Count() + " " + currentAnimalGroup.Key + ",";
+            Console.WriteLine(currentAnimalGroup.Count());
+          };
+          Console.WriteLine($"Grazing Field ({animalsString})");
+
+
+            // output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
+            // this._animals.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
+
         }
     }
 }
