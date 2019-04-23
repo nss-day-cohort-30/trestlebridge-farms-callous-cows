@@ -3,7 +3,7 @@ using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Plants
 {
-  public class Wildflower : Seed, IResource, ISeedProducing
+  public class Wildflower : Seed, IResource, ISeedProducing, INatural
   {
     public Wildflower()
     {
@@ -15,6 +15,10 @@ namespace Trestlebridge.Models.Plants
     public override string ToString()
     {
       return $"Wildflower. Yum!";
+    }
+     public double Pick()
+    {
+      return SeedProduced;
     }
   }
 }
