@@ -21,6 +21,8 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
+        public List<INatural> SeedsCount { get => _seeds; set => _seeds = value; }
+
         public void AddResource(INatural seed)
         {
             if (_seeds.Count < _capacity)
