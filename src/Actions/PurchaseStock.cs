@@ -32,7 +32,6 @@ namespace Trestlebridge.Actions
             switch (choice)
             {
                 case "1":
-
                         ChooseChickenHouse.CollectInput(farm, amount);
                     break;
                 case "2":
@@ -42,10 +41,7 @@ namespace Trestlebridge.Actions
                     }
                     break;
                 case "3":
-                    for (int i = 0; i < amount; i++)
-                    {
-                        ChooseDuckHouse.CollectInput(farm, new Duck());
-                    }
+                        ChooseDuckHouse.CollectInput(farm, amount);
                     break;
                 case "4":
                     for (int i = 0; i < amount; i++)

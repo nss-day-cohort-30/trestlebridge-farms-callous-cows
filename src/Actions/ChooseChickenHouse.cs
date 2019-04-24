@@ -15,11 +15,8 @@ namespace Trestlebridge.Actions
         {
             Console.Clear();
 
-
             while (amount > 0)
             {
-
-
 
                 try
                 {
@@ -36,7 +33,7 @@ namespace Trestlebridge.Actions
 
                     Console.Write("> ");
                     int choice = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine($"How many");
+                    Console.WriteLine($"How many?");
 
 
                     int amountToAdd = Int32.Parse(Console.ReadLine());
