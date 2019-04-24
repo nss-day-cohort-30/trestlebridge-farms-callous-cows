@@ -11,42 +11,56 @@ namespace Trestlebridge.Actions
     {
 
 
-        public static void CollectInput(Farm farm, Chicken chicken)
+        public static void CollectInput(Farm farm, int amount)
         {
             Console.Clear();
 
 
-
-            try
+            while (amount > 0)
             {
 
-                for (int i = 0; i < farm.ChickenHouses.Count; i++)
+
+
+                try
                 {
-                    Console.WriteLine($"{i + 1}. Chicken House has {farm.ChickenHouses[i].ChickensCount.Count()} chickens");
+
+                    for (int i = 0; i < farm.ChickenHouses.Count; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. Chicken House has {farm.ChickenHouses[i].ChickensCount.Count()} chickens");
+                    }
+
+                    Console.WriteLine();
+
+                    // How can I output the type of animal chosen here?
+                    Console.WriteLine($"Place the chicken/s where?");
+
+                    Console.Write("> ");
+                    int choice = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine($"How many");
+
+
+                    int amountToAdd = Int32.Parse(Console.ReadLine());
+                    if (amountToAdd > amount)
+                    {
+                        Console.WriteLine($"Only have {amount} left to add");
+                    }
+                    else
+                    {
+
+                        for (int i = 0; i < amountToAdd; i++)
+                        {
+                            farm.ChickenHouses[choice - 1].AddResource(new Chicken());
+                        }
+                        amount -= amountToAdd;
+
+                    }
                 }
+                catch (ArgumentOutOfRangeException)
+                {
 
-                Console.WriteLine();
-
-                // How can I output the type of animal chosen here?
-                Console.WriteLine($"Place the animal where?");
-
-                Console.Write("> ");
-                int choice = Int32.Parse(Console.ReadLine());
-
-
-
-
-                    farm.ChickenHouses[choice - 1].AddResource(chicken);
-
-
-
+                    Console.WriteLine("There is no facility to house this animal");
+                }
             }
-            catch (ArgumentOutOfRangeException)
-            {
-
-                Console.WriteLine("There is no facility to house this animal");
-            }
-
             // /*
             //     Couldn't get this to work. Can you?
             //     Stretch goal. Only if the app is fully functional.
