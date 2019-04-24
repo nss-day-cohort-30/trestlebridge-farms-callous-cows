@@ -9,6 +9,7 @@ namespace Trestlebridge.Models
 {
     public class Farm
     {
+
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
         public List<ChickenHouse> ChickenHouses { get; } = new List<ChickenHouse>();
