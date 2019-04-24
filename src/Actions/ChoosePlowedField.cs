@@ -16,9 +16,18 @@ namespace Trestlebridge.Actions
             {
                 for (int i = 0; i < farm.PlowedFields.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. Plowed Fields has {farm.PlowedFields[i].SeedsCount.Count()} rows of plants");
+                    var groupedSeeds = farm.PlowedFields[i].SeedsCount.GroupBy(
+         currentSeed => currentSeed.Type
+           );
+                    Console.WriteLine(groupedSeeds.Count());
+                    var seedString = "";
+                    foreach (var currentSeedGroup in groupedSeeds)
+                    {
+                        seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
+                        Console.WriteLine(currentSeedGroup.Count());
+                    };
+                    Console.WriteLine($"Plowed Field ({seedString})");
                 }
-
                 Console.WriteLine();
 
                 // How can I output the type of seed chosen here?
@@ -30,7 +39,7 @@ namespace Trestlebridge.Actions
                 farm.PlowedFields[choice - 1].AddResource(seed);
 
             }
-            catch (ArgumentOutOfRangeException )
+            catch (ArgumentOutOfRangeException)
             {
 
                 Console.WriteLine("There is no field to plant this seed");

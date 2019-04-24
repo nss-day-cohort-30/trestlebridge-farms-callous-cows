@@ -16,7 +16,18 @@ namespace Trestlebridge.Actions
             {
                 for (int i = 0; i < farm.NaturalFields.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. Natural Field has {farm.NaturalFields[i].SeedsCount.Count()} rows of plants");
+
+                    var groupedSeeds = farm.NaturalFields[i].SeedsCount.GroupBy(
+           currentSeed => currentSeed.Type
+             );
+                    Console.WriteLine(groupedSeeds.Count());
+                    var seedString = "";
+                    foreach (var currentSeedGroup in groupedSeeds)
+                    {
+                        seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
+                        Console.WriteLine(currentSeedGroup.Count());
+                    };
+                    Console.WriteLine($"Natural Field ({seedString})");
                 }
 
                 Console.WriteLine();
@@ -28,7 +39,7 @@ namespace Trestlebridge.Actions
 
                 farm.NaturalFields[choice - 1].AddResource(seed);
             }
-            catch (ArgumentOutOfRangeException )
+            catch (ArgumentOutOfRangeException)
             {
 
                 Console.WriteLine("There is no field to plant this seed");
