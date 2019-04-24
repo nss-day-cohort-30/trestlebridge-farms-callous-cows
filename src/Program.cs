@@ -60,7 +60,7 @@ namespace Trestlebridge
         else if (option == "4")
         {
           DisplayBanner();
-          Console.WriteLine(Trestlebridge);
+          ProcessingOptions.CollectInput(Trestlebridge);
         }
         else if (option == "5")
         {
