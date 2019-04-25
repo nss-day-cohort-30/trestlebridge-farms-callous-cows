@@ -32,7 +32,6 @@ namespace Trestlebridge.Actions
             switch (choice)
             {
                 case "1":
-
                         ChooseChickenHouse.CollectInput(farm, amount);
                     break;
                 case "2":
