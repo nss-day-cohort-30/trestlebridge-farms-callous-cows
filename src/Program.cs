@@ -61,7 +61,7 @@ namespace Trestlebridge
                         break;
                     case "4":
                         DisplayBanner();
-                        Console.WriteLine(Trestlebridge);
+                        ProcessingOptions.CollectInput(Trestlebridge);
                         break;
                     case "5":
                         DisplayBanner();
@@ -79,7 +79,7 @@ namespace Trestlebridge
                 }
 
 
-            
+
 
 
                 // if (option == "1")
