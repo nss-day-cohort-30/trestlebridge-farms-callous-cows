@@ -27,7 +27,8 @@ namespace Trestlebridge
 
             Farm Trestlebridge = new Farm();
 
-            while (true)
+            bool flag = true;
+            while (flag)
             {
                 DisplayBanner();
                 Console.WriteLine("1. Create Facility");
@@ -72,6 +73,7 @@ namespace Trestlebridge
                         break;
                     case "6":
                         Console.WriteLine("Today is a great day for farming");
+                        flag = false;
                         break;
                     default:
                         Console.WriteLine($"{option} Is not a valid input");
