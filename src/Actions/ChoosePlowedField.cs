@@ -42,7 +42,7 @@ namespace Trestlebridge.Actions
             catch (ArgumentOutOfRangeException)
             {
 
-                Console.WriteLine("There is no field to plant this seed");
+                Console.WriteLine("There is no field to plant this seed!");
             }
             /*
                 Couldn't get this to work. Can you?
