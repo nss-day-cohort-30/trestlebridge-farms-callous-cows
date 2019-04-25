@@ -43,9 +43,6 @@ namespace Trestlebridge
                 Console.Write("> ");
                 string option = Console.ReadLine();
 
-
-
-
                 switch (option)
                 {
                     case "1":

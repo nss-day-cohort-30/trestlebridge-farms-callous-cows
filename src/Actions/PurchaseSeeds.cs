@@ -37,19 +37,19 @@ namespace Trestlebridge.Actions
         case "2":
           for (int i = 0; i < amount; i++)
                     {
-         // ChooseNaturalField.CollectInput(farm, new Sunflower());
+          ChooseNaturalField.CollectInput(farm, new Sunflower(), amount);
                     }
           break;
         case "3":
           for (int i = 0; i < amount; i++)
                     {
-          //ChoosePlowedField.CollectInput(farm, new Sunflower());
+          ChoosePlowedField.CollectInput(farm, new Sunflower(), amount);
                     }
           break;
         case "4":
           for (int i = 0; i < amount; i++)
                     {
-          //ChooseNaturalField.CollectInput(farm, new Wildflower());
+          ChooseNaturalField.CollectInput(farm, new Wildflower(), amount);
                     }
           break;
            default:
