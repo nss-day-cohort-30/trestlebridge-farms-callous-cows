@@ -9,7 +9,7 @@ namespace Trestlebridge.Actions
 {
     public class ChooseChickenHouse
     {
-        public static void CollectInput(Farm farm,int amount)
+        public static void CollectInput(Farm farm, int amount)
         {
             Console.Clear();
 

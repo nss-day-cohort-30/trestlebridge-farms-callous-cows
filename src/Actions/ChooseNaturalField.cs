@@ -24,7 +24,7 @@ namespace Trestlebridge.Actions
                         foreach (var currentSeedGroup in groupedSeeds)
                         {
                             seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
-                            Console.WriteLine(currentSeedGroup.Count());
+
                         };
                         Console.WriteLine($" {i + 1}: Plowed Field ({seedString})");
                     }
