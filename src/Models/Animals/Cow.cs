@@ -30,7 +30,7 @@ namespace Trestlebridge.Models.Animals {
 
         public override string ToString () {
 
-            return $"";
+            return $"{this._shortId}";
         }
     }
 }

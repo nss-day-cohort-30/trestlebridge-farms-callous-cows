@@ -15,11 +15,12 @@ namespace Trestlebridge.Actions
       while (amount > 0)
       {
 
+
         try
         {
           for (int i = 0; i < farm.DuckHouses.Count; i++)
           {
-            Console.WriteLine($"{i + 1}. Duck House has {farm.DuckHouses[i].DucksCount.Count()} ducks");
+            Console.WriteLine($"{i + 1}. Duck House has ({farm.DuckHouses[i].DucksCount.Count()} ducks)");
           }
 
           Console.WriteLine();
@@ -45,6 +46,7 @@ namespace Trestlebridge.Actions
             amount -= amountToAdd;
           }
 
+
         }
         catch (ArgumentOutOfRangeException)
         {
@@ -53,6 +55,12 @@ namespace Trestlebridge.Actions
         }
 
       }
+      /*
+          Couldn't get this to work. Can you?
+          Stretch goal. Only if the app is fully functional.
+       */
+      // farm.PurchaseResource<IGrazing>(animal, choice);
+
     }
   }
 }
