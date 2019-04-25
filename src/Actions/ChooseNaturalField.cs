@@ -8,55 +8,65 @@ namespace Trestlebridge.Actions
 {
     public class ChooseNaturalField
     {
-        public static void CollectInput(Farm farm, INatural seed)
+        public static void CollectInput<T>(Farm farm, T seed, int amount)
         {
-            Console.WriteLine("we got here");
-            Console.Clear();
-            try
+            while (amount > 0)
             {
-                for (int i = 0; i < farm.NaturalFields.Count; i++)
+                try
+                {
+                    for (int i = 0; i < farm.NaturalFields.Count; i++)
+                    {
+                        var groupedSeeds = farm.NaturalFields[i].SeedsCount.GroupBy(
+             currentSeed => currentSeed.Type
+               );
+                        Console.WriteLine(groupedSeeds.Count());
+                        var seedString = "";
+                        foreach (var currentSeedGroup in groupedSeeds)
+                        {
+                            seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
+                            Console.WriteLine(currentSeedGroup.Count());
+                        };
+                        Console.WriteLine($"Plowed Field ({seedString})");
+                    }
+
+                    Console.WriteLine();
+
+                    // How can I output the type of animal chosen here?
+                    Console.WriteLine($"Place the sesame/s where?");
+
+                    Console.Write("> ");
+                    int choice = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine($"How many");
+
+                    int amountToAdd = Int32.Parse(Console.ReadLine());
+                    if (amountToAdd > amount)
+                    {
+                        Console.WriteLine($"Only have {amount} left to add");
+                    }
+                    else
+                    {
+                        for (int i = 0; i < amountToAdd; i++)
+                        {
+                            dynamic naturalSeed = Activator.CreateInstance(seed.GetType());
+                            farm.NaturalFields[choice - 1].AddResource(naturalSeed);
+                        }
+                        amount -= amountToAdd;
+                    }
+                }
+                catch (ArgumentOutOfRangeException)
                 {
 
-                    var groupedSeeds = farm.NaturalFields[i].SeedsCount.GroupBy(
-           currentSeed => currentSeed.Type
-             );
-                    Console.WriteLine(groupedSeeds.Count());
-                    var seedString = "";
-                    foreach (var currentSeedGroup in groupedSeeds)
-                    {
-                        seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
-                        Console.WriteLine(currentSeedGroup.Count());
-                    };
-                    Console.WriteLine($"Natural Field ({seedString})");
+                    Console.WriteLine("There is no field to plant this seed!");
                 }
 
-                Console.WriteLine();
 
-                Console.WriteLine($"Place the seeds where?");
+                /*
+                    Couldn't get this to work. Can you?
+                    Stretch goal. Only if the app is fully functional.
+                 */
+                // farm.PurchaseResource<IGrazing>(animal, choice);
 
-                Console.Write("> ");
-                int choice = Int32.Parse(Console.ReadLine());
-
-                farm.NaturalFields[choice - 1].AddResource(seed);
             }
-            catch (ArgumentOutOfRangeException)
-            {
-
-                Console.WriteLine("There is no field to plant this seed");
-            }
-
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
-
-        }
-
-        internal static void CollectInput(Farm seed, Sesame sesame)
-        {
-            throw new NotImplementedException();
         }
     }
 }
