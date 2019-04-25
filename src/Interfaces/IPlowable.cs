@@ -2,7 +2,7 @@ namespace Trestlebridge.Interfaces
 {
   public interface IPlowable
   {
-    string Type {get;}
+    string Type { get; }
     double Plow();
   }
 }

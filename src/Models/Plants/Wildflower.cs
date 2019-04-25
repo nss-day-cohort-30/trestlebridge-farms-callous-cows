@@ -11,12 +11,11 @@ namespace Trestlebridge.Models.Plants
       Type = "Wildflower";
     }
 
-
     public override string ToString()
     {
       return $"Wildflower. Yum!";
     }
-     public double Pick()
+    public double Pick()
     {
       return SeedProduced;
     }
