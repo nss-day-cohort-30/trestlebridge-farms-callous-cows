@@ -9,16 +9,12 @@ namespace Trestlebridge.Actions
 {
     public class ChooseChickenHouse
     {
-        public static void CollectInput(Farm farm,int amount)
+        public static void CollectInput(Farm farm, int amount)
         {
             Console.Clear();
 
             while (amount > 0)
             {
-<<<<<<< HEAD
-
-=======
->>>>>>> master
                 try
                 {
                     for (int i = 0; i < farm.ChickenHouses.Count; i++)
