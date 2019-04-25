@@ -19,14 +19,14 @@ namespace Trestlebridge.Actions
                         var groupedSeeds = farm.NaturalFields[i].SeedsCount.GroupBy(
              currentSeed => currentSeed.Type
                );
-                        Console.WriteLine(groupedSeeds.Count());
+
                         var seedString = "";
                         foreach (var currentSeedGroup in groupedSeeds)
                         {
                             seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
                             Console.WriteLine(currentSeedGroup.Count());
                         };
-                        Console.WriteLine($"Plowed Field ({seedString})");
+                        Console.WriteLine($" {i + 1}: Plowed Field ({seedString})");
                     }
 
                     Console.WriteLine();
