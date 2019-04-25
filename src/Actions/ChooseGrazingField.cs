@@ -21,12 +21,12 @@ namespace Trestlebridge.Actions
                         var groupedAnimals = farm.GrazingFields[i].AnimalsCount.GroupBy(
                          currentAnimal => currentAnimal.Type);
 
-                        Console.WriteLine(groupedAnimals.Count());
+
                         var animalsString = "";
                         foreach (var currentAnimalGroup in groupedAnimals)
                         {
                             animalsString += currentAnimalGroup.Key + currentAnimalGroup.Count() + ",";
-                            Console.WriteLine(currentAnimalGroup.Count());
+                            
                         };
                         Console.WriteLine($"{i + 1}. Grazing Field has ({animalsString}) animals.");
                     }
