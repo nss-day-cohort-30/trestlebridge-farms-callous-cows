@@ -14,8 +14,6 @@ namespace Trestlebridge.Actions
 
       while (amount > 0)
       {
-
-
         try
         {
           for (int i = 0; i < farm.DuckHouses.Count; i++)
@@ -24,8 +22,6 @@ namespace Trestlebridge.Actions
           }
 
           Console.WriteLine();
-
-          // How can I output the type of animal chosen here?
           Console.WriteLine($"Place the animal where?");
 
           Console.Write("> ");
@@ -55,12 +51,6 @@ namespace Trestlebridge.Actions
         }
 
       }
-      /*
-          Couldn't get this to work. Can you?
-          Stretch goal. Only if the app is fully functional.
-       */
-      // farm.PurchaseResource<IGrazing>(animal, choice);
-
     }
   }
 }

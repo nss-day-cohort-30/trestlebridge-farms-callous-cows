@@ -5,6 +5,6 @@ namespace Trestlebridge.Interfaces
 
     double Pick();
 
-    string Type {get;}
+    string Type { get; }
   }
 }
