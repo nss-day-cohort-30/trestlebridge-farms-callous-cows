@@ -59,7 +59,7 @@ namespace Trestlebridge
             break;
           case "4":
             DisplayBanner();
-            // ProcessingOptions.CollectInput(Trestlebridge);
+            ProcessingOptions.CollectInput(Trestlebridge);
             break;
           case "5":
             // DisplayBanner();
