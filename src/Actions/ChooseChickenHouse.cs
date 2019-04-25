@@ -9,23 +9,22 @@ namespace Trestlebridge.Actions
 {
     public class ChooseChickenHouse
     {
-
-
-        public static void CollectInput(Farm farm, int amount)
+        public static void CollectInput(Farm farm,int amount)
         {
             Console.Clear();
 
             while (amount > 0)
             {
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
                 try
                 {
-
                     for (int i = 0; i < farm.ChickenHouses.Count; i++)
                     {
                         Console.WriteLine($"{i + 1}. Chicken House has {farm.ChickenHouses[i].ChickensCount.Count()} chickens");
                     }
-
                     Console.WriteLine();
 
                     // How can I output the type of animal chosen here?
@@ -35,7 +34,6 @@ namespace Trestlebridge.Actions
                     int choice = Int32.Parse(Console.ReadLine());
                     Console.WriteLine($"How many?");
 
-
                     int amountToAdd = Int32.Parse(Console.ReadLine());
                     if (amountToAdd > amount)
                     {
@@ -43,13 +41,11 @@ namespace Trestlebridge.Actions
                     }
                     else
                     {
-
                         for (int i = 0; i < amountToAdd; i++)
                         {
                             farm.ChickenHouses[choice - 1].AddResource(new Chicken());
                         }
                         amount -= amountToAdd;
-
                     }
                 }
                 catch (ArgumentOutOfRangeException)
