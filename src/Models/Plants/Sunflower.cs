@@ -16,11 +16,11 @@ namespace Trestlebridge.Models.Plants
       return $"Sunflower. Yum!";
     }
 
-     public double Plow()
+    public double Plow()
     {
       return SeedProduced;
     }
-     public double Pick()
+    public double Pick()
     {
       return SeedProduced;
     }

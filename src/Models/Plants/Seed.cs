@@ -10,7 +10,7 @@ namespace Trestlebridge.Models.Plants
     {
       get
       { return _type; }
-      set {_type = value;}
+      set { _type = value; }
     }
     public double SeedProduced
     {
