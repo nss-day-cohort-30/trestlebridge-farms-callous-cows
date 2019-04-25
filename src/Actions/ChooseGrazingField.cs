@@ -26,7 +26,7 @@ namespace Trestlebridge.Actions
                         foreach (var currentAnimalGroup in groupedAnimals)
                         {
                             animalsString += currentAnimalGroup.Key + currentAnimalGroup.Count() + ",";
-                            
+
                         };
                         Console.WriteLine($"{i + 1}. Grazing Field has ({animalsString}) animals.");
                     }
@@ -46,7 +46,7 @@ namespace Trestlebridge.Actions
                     }
                     else
                     {
-                      dynamic animalChoice = Activator.CreateInstance(animal.GetType());
+                        dynamic animalChoice = Activator.CreateInstance(animal.GetType());
                         // IGrazing animalChoice = (IGrazing)Activator.CreateInstance(typeof(T), new object[] { });
 
 
