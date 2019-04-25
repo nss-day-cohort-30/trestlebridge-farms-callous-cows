@@ -15,6 +15,10 @@ namespace Trestlebridge.Actions
 
             while (amount > 0)
             {
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
                 try
                 {
                     for (int i = 0; i < farm.ChickenHouses.Count; i++)

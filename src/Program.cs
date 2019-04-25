@@ -9,7 +9,7 @@ namespace Trestlebridge
     {
         static void DisplayBanner()
         {
-            Console.Clear();
+            // Console.Clear();
             Console.WriteLine();
             Console.WriteLine(@"
         +-++-++-++-++-++-++-++-++-++-++-++-++-+
@@ -62,7 +62,7 @@ namespace Trestlebridge
                         ProcessingOptions.CollectInput(Trestlebridge);
                         break;
                     case "5":
-                        DisplayBanner();
+                        // DisplayBanner();
                         Console.WriteLine(Trestlebridge);
                         Console.WriteLine("\n\n\n\n");
                         Console.WriteLine("Press return key to go back to main menu.");
@@ -76,49 +76,6 @@ namespace Trestlebridge
                         Console.WriteLine($"{option} Is not a valid input");
                         break;
                 }
-
-
-
-
-
-                // if (option == "1")
-                // {
-                //     DisplayBanner();
-                //     CreateFacility.CollectInput(Trestlebridge);
-                // }
-                // else if (option == "2")
-                // {
-                //     DisplayBanner();
-                //     PurchaseStock.CollectInput(Trestlebridge);
-                // }
-                // else if (option == "3")
-                // {
-                //     DisplayBanner();
-                //     PurchaseSeeds.CollectInput(Trestlebridge);
-                // }
-                // else if (option == "4")
-                // {
-                //     DisplayBanner();
-                //     Console.WriteLine(Trestlebridge);
-                // }
-                // else if (option == "5")
-                // {
-                //     DisplayBanner();
-                //     Console.WriteLine(Trestlebridge);
-                //     Console.WriteLine("\n\n\n\n");
-                //     Console.WriteLine("Press return key to go back to main menu.");
-                //     Console.ReadLine();
-
-                // }
-                // else if (option == "6")
-                // {
-                //     Console.WriteLine("Today is a great day for farming");
-                //     break;
-                // }
-                // else
-                // {
-                //     Console.WriteLine($"Invalid option: {option}");
-                // }
             }
         }
     }
