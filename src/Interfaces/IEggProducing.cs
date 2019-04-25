@@ -1,12 +1,12 @@
 namespace Trestlebridge.Interfaces
 {
-    public interface IEggProducing
-    {
+  public interface IEggProducing
+  {
 
-        string Type {get;}
+    string Type { get; }
 
-        double GatherEggs();
+    double GatherEggs();
 
 
-    }
+  }
 }

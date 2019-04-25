@@ -1,9 +1,10 @@
-namespace Trestlebridge.Interfaces{
-
-public interface ICompostProducing
+namespace Trestlebridge.Interfaces
 {
+
+  public interface ICompostProducing
+  {
     double Composter();
-}
+  }
 
 
 
