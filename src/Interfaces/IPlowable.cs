@@ -4,6 +4,5 @@ namespace Trestlebridge.Interfaces
   {
     string Type {get;}
     double Plow();
-    // double MeatProduced { get; }
   }
 }

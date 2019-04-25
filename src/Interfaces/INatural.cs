@@ -6,6 +6,5 @@ namespace Trestlebridge.Interfaces
     double Pick();
 
     string Type {get;}
-    // double MeatProduced { get; }
   }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using Trestlebridge.Interfaces;
 
 namespace Trestlebridge.Models.Animals {
@@ -10,7 +11,7 @@ namespace Trestlebridge.Models.Animals {
 
         private string _shortId {
             get {
-                return this._id.ToString().Substring(this._id.ToString().Length - 6);
+                return this.Id.ToString().Substring(this.Id.ToString().Length - 6);
             }
         }
 
@@ -19,8 +20,10 @@ namespace Trestlebridge.Models.Animals {
 
     public double MeatProduced => throw new NotImplementedException();
 
-    // Methods
-    public void Graze () {
+        public Guid Id { get => _id; set => _id = value; }
+
+        // Methods
+        public void Graze () {
             Console.WriteLine($"Cow {this._shortId} just ate {this.GrassPerDay}kg of grass");
         }
 
@@ -28,9 +31,11 @@ namespace Trestlebridge.Models.Animals {
             return _meatProduced;
         }
 
-        public override string ToString () {
+        // public override string ToString () {
+        //         StringBuilder output = new StringBuilder();
+        //     output.Append($"Cow {this._shortId}");
 
-            return $"";
-        }
+        //     return output.ToString();
+        // }
     }
 }

@@ -35,47 +35,41 @@ namespace Trestlebridge.Actions
                         ChooseChickenHouse.CollectInput(farm, amount);
                     break;
                 case "2":
-                    for (int i = 0; i < amount; i++)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Cow());
-                    }
+
+                        ChooseGrazingField.CollectInput(farm, new Cow(), amount);
+
                     break;
                 case "3":
-                    for (int i = 0; i < amount; i++)
-                    {
+
                         ChooseDuckHouse.CollectInput(farm, new Duck());
-                    }
+
                     break;
                 case "4":
-                    for (int i = 0; i < amount; i++)
-                    {
 
-                        ChooseGrazingField.CollectInput(farm, new Goat());
-                    }
+                        ChooseGrazingField.CollectInput(farm, new Goat(), amount);
+
                     break;
                 case "5":
-                    for (int i = 0; i < amount; i++)
-                    {
 
-                        ChooseGrazingField.CollectInput(farm, new Ostrich());
-                    }
+
+                        ChooseGrazingField.CollectInput(farm, new Ostrich(), amount);
+
                     break;
                 case "6":
-                    for (int i = 0; i < amount; i++)
-                    {
 
-                        ChooseGrazingField.CollectInput(farm, new Pig());
-                    }
+
+                        ChooseGrazingField.CollectInput(farm, new Pig(), amount);
+
                     break;
                 case "7":
-                    for (int i = 0; i < amount; i++)
-                    {
 
-                        ChooseGrazingField.CollectInput(farm, new Sheep());
-                    }
+
+                        ChooseGrazingField.CollectInput(farm, new Sheep(), amount);
+
                     break;
                 default:
                     Console.WriteLine($"{choice} Is not a valid input");
+                    
                     break;
             }
         }
