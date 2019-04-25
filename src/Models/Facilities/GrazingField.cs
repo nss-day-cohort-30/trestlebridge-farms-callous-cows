@@ -56,12 +56,12 @@ namespace Trestlebridge.Models.Facilities {
           var groupedAnimals = _animals.GroupBy(
             currentAnimal => currentAnimal.Type
               );
-              Console.WriteLine(groupedAnimals.Count());
+            //   Console.WriteLine(groupedAnimals.Count());
           var animalsString = "";
           foreach (var currentAnimalGroup in groupedAnimals)
           {
             animalsString += currentAnimalGroup.Count() + " " + currentAnimalGroup.Key + ",";
-            Console.WriteLine(currentAnimalGroup.Count());
+            // Console.WriteLine(currentAnimalGroup.Count());
           };
           Console.WriteLine($"Grazing Field ({animalsString})");
 
