@@ -41,7 +41,7 @@ namespace Trestlebridge.Actions
                     break;
                 case "3":
 
-                        ChooseDuckHouse.CollectInput(farm, new Duck());
+                        ChooseDuckHouse.CollectInput(farm, amount);
 
                     break;
                 case "4":
@@ -68,7 +68,7 @@ namespace Trestlebridge.Actions
 
                     break;
                 default:
-                    Console.WriteLine($"{choice} Is not a valid input");
+                    Console.WriteLine($"{choice} Is not a valid input!");
 
                     break;
             }

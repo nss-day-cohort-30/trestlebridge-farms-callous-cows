@@ -15,6 +15,10 @@ namespace Trestlebridge.Actions
 
             while (amount > 0)
             {
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
                 try
                 {
                     for (int i = 0; i < farm.ChickenHouses.Count; i++)
@@ -28,7 +32,7 @@ namespace Trestlebridge.Actions
 
                     Console.Write("> ");
                     int choice = Int32.Parse(Console.ReadLine());
-                    Console.WriteLine($"How many");
+                    Console.WriteLine($"How many?");
 
                     int amountToAdd = Int32.Parse(Console.ReadLine());
                     if (amountToAdd > amount)

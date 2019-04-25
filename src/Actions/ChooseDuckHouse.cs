@@ -6,42 +6,61 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Actions
 {
-    public class ChooseDuckHouse
+  public class ChooseDuckHouse
+  {
+    public static void CollectInput(Farm farm, int amount)
     {
-        public static void CollectInput(Farm farm, Duck duck)
+      Console.Clear();
+
+      while (amount > 0)
+      {
+
+
+        try
         {
-            Console.Clear();
-            try
+          for (int i = 0; i < farm.DuckHouses.Count; i++)
+          {
+            Console.WriteLine($"{i + 1}. Duck House has ({farm.DuckHouses[i].DucksCount.Count()} ducks)");
+          }
+
+          Console.WriteLine();
+
+          // How can I output the type of animal chosen here?
+          Console.WriteLine($"Place the animal where?");
+
+          Console.Write("> ");
+          int choice = Int32.Parse(Console.ReadLine());
+          Console.WriteLine($"How many?");
+
+          int amountToAdd = Int32.Parse(Console.ReadLine());
+          if (amountToAdd > amount)
+          {
+            Console.WriteLine($"Only have {amount} left to add!");
+          }
+          else
+          {
+            for (int i = 0; i < amountToAdd; i++)
             {
-                for (int i = 0; i < farm.DuckHouses.Count; i++)
-                {
-                    Console.WriteLine($"{i + 1}. Duck House has {farm.DuckHouses[i].DucksCount.Count()} ducks");
-                }
-
-                Console.WriteLine();
-
-                // How can I output the type of animal chosen here?
-                Console.WriteLine($"Place the animal where?");
-
-                Console.Write("> ");
-                int choice = Int32.Parse(Console.ReadLine());
-
-                farm.DuckHouses[choice - 1].AddResource(duck);
-
+              farm.DuckHouses[choice - 1].AddResource(new Duck());
             }
-            catch (ArgumentOutOfRangeException )
-            {
+            amount -= amountToAdd;
+          }
 
-                Console.WriteLine("There is no facility to house this animal");
-            }
-
-
-            /*
-                Couldn't get this to work. Can you?
-                Stretch goal. Only if the app is fully functional.
-             */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
 
         }
+        catch (ArgumentOutOfRangeException)
+        {
+
+          Console.WriteLine("There is no facility to house this animal");
+        }
+
+      }
+      /*
+          Couldn't get this to work. Can you?
+          Stretch goal. Only if the app is fully functional.
+       */
+      // farm.PurchaseResource<IGrazing>(animal, choice);
+
     }
+  }
 }

@@ -16,13 +16,10 @@ namespace Trestlebridge.Actions
             Console.WriteLine("5. Duck House");
 
             Console.WriteLine();
-            Console.WriteLine("Choose what you want to create");
+            Console.WriteLine("Choose what you want to create.");
 
             Console.Write("> ");
             string input = Console.ReadLine();
-
-
-
 
             switch (input)
             {
@@ -43,7 +40,7 @@ namespace Trestlebridge.Actions
                     break;
 
                 default:
-                    Console.WriteLine($"{input} Is not a valid input");
+                    Console.WriteLine($"{input} Is not a valid input!");
                     break;
             }
         }

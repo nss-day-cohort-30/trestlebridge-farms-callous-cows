@@ -57,8 +57,7 @@ namespace Trestlebridge.Actions
                 catch (ArgumentOutOfRangeException)
                 {
 
-                    Console.WriteLine("There is no facility to house this seed");
-                }
+                Console.WriteLine("There is no field to plant this seed!");
             }
 
 
@@ -70,4 +69,4 @@ namespace Trestlebridge.Actions
 
         }
     }
-}
+}}
