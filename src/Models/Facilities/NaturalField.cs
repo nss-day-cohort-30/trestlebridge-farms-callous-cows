@@ -9,6 +9,7 @@ namespace Trestlebridge.Models.Facilities
 {
   public class NaturalField : IFacility<INatural>
   {
+    public string type = "Natural Field";
     private int _capacity = 10;
     private Guid _id = Guid.NewGuid();
     private List<INatural> _seeds = new List<INatural>();
