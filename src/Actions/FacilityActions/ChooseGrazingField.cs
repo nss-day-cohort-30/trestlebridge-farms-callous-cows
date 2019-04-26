@@ -35,12 +35,12 @@ namespace Trestlebridge.Actions
 
           Console.Write("> ");
           int choice = Int32.Parse(Console.ReadLine());
-          Console.WriteLine($"How many");
+          Console.WriteLine($"How many?");
 
           int amountToAdd = Int32.Parse(Console.ReadLine());
           if (amountToAdd > amount)
           {
-            Console.WriteLine($"Only have {amount} left to add");
+            Console.WriteLine($"Only have {amount} left to add.");
           }
           else
           {
@@ -51,9 +51,8 @@ namespace Trestlebridge.Actions
             for (int i = 0; i < amountToAdd; i++)
             {
               farm.GrazingFields[choice - 1].AddResource(animalChoice);
-
+              amount -= amountToAdd;
             }
-            amount -= amountToAdd;
 
           }
         }
