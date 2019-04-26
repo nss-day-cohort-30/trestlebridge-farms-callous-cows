@@ -47,6 +47,7 @@ namespace Trestlebridge.Actions
                         dynamic animalChoice = Activator.CreateInstance(animal.GetType());
                         // IGrazing animalChoice = (IGrazing)Activator.CreateInstance(typeof(T), new object[] { });
 
+                    Console.Write("> ");
 
                         for (int i = 0; i < amountToAdd; i++)
                         {
