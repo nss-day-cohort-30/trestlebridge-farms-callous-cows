@@ -7,7 +7,6 @@ namespace Trestlebridge.Models.Equipment
 {
     public class ChooseMeatProcessor
     {
-
         public static void CollectInput(Farm farm)
         {
             var list = farm.CreateFacilitiesList();
@@ -20,6 +19,23 @@ namespace Trestlebridge.Models.Equipment
                     i--;
                     Console.WriteLine(i);
                 }
+
+                //ist[i][j].AnimalsCount;
+
+                //
+
+                // if ((list[i][j].GetType().Name) == "GrazingField")
+                // {
+                //     MyClass mc = (MyClass)(object) t;
+                // }
+                // else if (typeof(T) == typeof(List<MyClass>))
+                // {
+                //     List<MyClass> lmc = (List<MyClass>)(object) t;
+                // }
+
+
+
+
 
                 //return animal.Butcher();
 

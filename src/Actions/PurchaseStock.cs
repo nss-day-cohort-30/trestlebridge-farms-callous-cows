@@ -54,6 +54,7 @@ namespace Trestlebridge.Actions
           break;
         default:
           Console.WriteLine($"{choice} Is not a valid input!");
+          Console.ReadLine();
           break;
       }
     }

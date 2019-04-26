@@ -7,63 +7,69 @@ using Trestlebridge.Models.Plants;
 
 namespace Trestlebridge.Actions
 {
-  public class ChooseGrazingField
-  {
-    public static void CollectInput<T>(Farm farm, T animal, int amount)
+    public class ChooseGrazingField
     {
-      Console.Clear();
-      while (amount > 0)
-      {
-        try
+        public static void CollectInput<T>(Farm farm, T animal, int amount)
         {
-          for (int i = 0; i < farm.GrazingFields.Count; i++)
-          {
-            var groupedAnimals = farm.GrazingFields[i].AnimalsCount.GroupBy(
-             currentAnimal => currentAnimal.Type);
-
-
-            var animalsString = "";
-            foreach (var currentAnimalGroup in groupedAnimals)
+            Console.Clear();
+            while (amount > 0)
             {
-              animalsString += currentAnimalGroup.Key + currentAnimalGroup.Count() + ",";
-
-            };
-            Console.WriteLine($"{i + 1}. Grazing Field has ({animalsString}) animals.");
-          }
-
-          Console.WriteLine($"Place the animal where?");
-
-          Console.Write("> ");
-          int choice = Int32.Parse(Console.ReadLine());
-          Console.WriteLine($"How many");
-
-          int amountToAdd = Int32.Parse(Console.ReadLine());
-          if (amountToAdd > amount)
-          {
-            Console.WriteLine($"Only have {amount} left to add");
-          }
-          else
-          {
-            dynamic animalChoice = Activator.CreateInstance(animal.GetType());
-            // IGrazing animalChoice = (IGrazing)Activator.CreateInstance(typeof(T), new object[] { });
+                try
+                {
+                    for (int i = 0; i < farm.GrazingFields.Count; i++)
+                    {
+                        var groupedAnimals = farm.GrazingFields[i].AnimalsCount.GroupBy(
+                         currentAnimal => currentAnimal.Type);
 
 
-            for (int i = 0; i < amountToAdd; i++)
-            {
-              farm.GrazingFields[choice - 1].AddResource(animalChoice);
+                        var animalsString = "";
+                        foreach (var currentAnimalGroup in groupedAnimals)
+                        {
+                            animalsString += currentAnimalGroup.Key + currentAnimalGroup.Count() + ",";
 
+                        };
+                        Console.WriteLine($"{i + 1}. Grazing Field has ({animalsString}) animals.");
+                    }
+
+                    Console.WriteLine($"Place the animal where?");
+
+                    Console.Write("> ");
+                    int choice = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine($"How many?");
+
+                    int amountToAdd = Int32.Parse(Console.ReadLine());
+                    if (amountToAdd > amount)
+                    {
+                        Console.WriteLine($"Only have {amount} left to add");
+                    }
+                    else
+                    {
+                        dynamic animalChoice = Activator.CreateInstance(animal.GetType());
+                        // IGrazing animalChoice = (IGrazing)Activator.CreateInstance(typeof(T), new object[] { });
+
+
+                        for (int i = 0; i < amountToAdd; i++)
+                        {
+                            farm.GrazingFields[choice - 1].AddResource(animalChoice);
+                            amount -= amountToAdd;
+
+                        }
+                    }
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine("There is no facility to house this animal");
+                    Console.ReadLine();
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid Input!");
+                    Console.ReadLine();
+                    break;
+                }
             }
-            amount -= amountToAdd;
-
-          }
         }
-        catch (ArgumentOutOfRangeException)
-        {
 
-          Console.WriteLine("There is no facility to house this animal");
-        }
-      }
     }
-
-  }
 }

@@ -41,13 +41,18 @@ namespace Trestlebridge.Actions
             }
             amount -= amountToAdd;
           }
-
-
         }
         catch (ArgumentOutOfRangeException)
         {
-
           Console.WriteLine("There is no facility to house this animal");
+          Console.ReadLine();
+          break;
+        }
+         catch (FormatException)
+        {
+          Console.WriteLine("Invalid Input!");
+           Console.ReadLine();
+          break;
         }
 
       }
