@@ -9,6 +9,7 @@ namespace Trestlebridge.Models.Facilities
 {
   public class PlowedField : IFacility<IPlowable>
   {
+    public string type = "Plowed Field";
     private int _capacity = 13;
     private Guid _id = Guid.NewGuid();
     private List<IPlowable> _seeds = new List<IPlowable>();
@@ -60,7 +61,7 @@ namespace Trestlebridge.Models.Facilities
         seedString += currentSeedGroup.Count() + " " + currentSeedGroup.Key + ",";
 
       };
-      Console.WriteLine($"Grazing Field ({seedString})");
+      Console.WriteLine($"Plowed Field ({seedString})");
       return output.ToString();
     }
   }

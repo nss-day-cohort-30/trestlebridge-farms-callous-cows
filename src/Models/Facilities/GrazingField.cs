@@ -9,6 +9,8 @@ namespace Trestlebridge.Models.Facilities
   public class GrazingField : IFacility<IGrazing>
   {
     private int _capacity = 20;
+
+    public string type = "Grazing Field";
     private Guid _id = Guid.NewGuid();
     private List<IGrazing> _animals = new List<IGrazing>();
     public double Capacity

@@ -8,6 +8,7 @@ namespace Trestlebridge.Models.Facilities
 {
   public class ChickenHouse : IFacility<Chicken>
   {
+    public string type = "Chicken House";
     private int _capacity = 15;
     private Guid _id = Guid.NewGuid();
     private List<Chicken> _chickens = new List<Chicken>();
