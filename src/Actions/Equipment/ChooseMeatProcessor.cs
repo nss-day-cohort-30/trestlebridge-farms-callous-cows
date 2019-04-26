@@ -15,6 +15,7 @@ namespace Trestlebridge.Models.Equipment
       {
           Console.WriteLine($@"{i} {list[i][0].GetType().Name}");
       }
+      Console.ReadLine();
       //return animal.Butcher();
 
     }
