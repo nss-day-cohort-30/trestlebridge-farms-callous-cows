@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
+using Trestlebridge.Models;
 
 
 namespace Trestlebridge.Models.Equipment
@@ -12,12 +13,10 @@ namespace Trestlebridge.Models.Equipment
             var list = farm.CreateFacilitiesList();
             for (int i = 0; i < list.Count; i++)
             {
-                Console.WriteLine(list[i][0].GetType().Name);
                 if (list[i][0].GetType().Name != "GrazingField" && list[i][0].GetType().Name != "ChickenHouse")
                 {
                     list.RemoveAt(i);
                     i--;
-                    Console.WriteLine(i);
                 }
 
                 //ist[i][j].AnimalsCount;
@@ -41,11 +40,12 @@ namespace Trestlebridge.Models.Equipment
 
             }
 
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.WriteLine($"{i}  {list[i][0].GetType().Name}");
+      for (int i = 0; i < list.Count; i++)
+      {
+        Console.WriteLine($"{i}  {list[i][0].GetType().Name}");
 
-            }
-        }
+      }
+      Console.ReadLine();
     }
+  }
 }

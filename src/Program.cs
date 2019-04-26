@@ -9,7 +9,7 @@ namespace Trestlebridge
   {
     static void DisplayBanner()
     {
-      // Console.Clear();
+      Console.Clear();
       Console.WriteLine();
       Console.WriteLine(@"
         +-++-++-++-++-++-++-++-++-++-++-++-++-+
@@ -62,7 +62,7 @@ namespace Trestlebridge
             ProcessingOptions.CollectInput(Trestlebridge);
             break;
           case "5":
-            // DisplayBanner();
+            DisplayBanner();
             Console.WriteLine(Trestlebridge);
             Console.WriteLine("\n\n\n\n");
             Console.WriteLine("Press return key to go back to main menu.");
