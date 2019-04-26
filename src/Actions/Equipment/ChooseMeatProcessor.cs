@@ -13,12 +13,10 @@ namespace Trestlebridge.Models.Equipment
       var list = farm.CreateFacilitiesList();
       for (int i = 0; i < list.Count; i++)
       {
-          Console.WriteLine($"{i} ");
-          Console.WriteLine($" {list[i][0]}");
+          // Console.WriteLine($"{i} ");
+          Console.WriteLine($@"{i}  {list[i][0].GetType().Name}");
       }
-
-
-
+      Console.ReadLine();
       //return animal.Butcher();
 
     }
