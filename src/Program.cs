@@ -62,7 +62,7 @@ namespace Trestlebridge
             ProcessingOptions.CollectInput(Trestlebridge);
             break;
           case "5":
-            // DisplayBanner();
+            DisplayBanner();
             Console.WriteLine(Trestlebridge);
             Console.WriteLine("\n\n\n\n");
             Console.WriteLine("Press return key to go back to main menu.");
