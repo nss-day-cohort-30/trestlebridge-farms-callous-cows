@@ -55,6 +55,7 @@ namespace Trestlebridge.Actions
         {
 
           Console.WriteLine("There is no field to plant this seed!");
+          Console.ReadLine();
         }
 
 

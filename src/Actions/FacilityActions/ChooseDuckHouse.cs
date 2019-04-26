@@ -48,6 +48,7 @@ namespace Trestlebridge.Actions
         {
 
           Console.WriteLine("There is no facility to house this animal");
+          Console.ReadLine();
         }
 
       }
